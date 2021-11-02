@@ -1,5 +1,7 @@
 require "bundler/setup"
-require "weblog/parser"
+require "weblog"
+
+RspecRoot = Pathname.new(__dir__)
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

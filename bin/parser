@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "weblog"
+
+begin
+  parser = Weblog::Parser.new(ARGV[0])
+  parser.print_total_visits
+  parser.print_unique_visits
+rescue Weblog::Error => e
+  STDERR.puts(e.message)
+  exit(e.code)
+rescue StandardError => e
+  STDERR.puts(e.message)
+  exit(-1)
+end
