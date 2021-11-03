@@ -1,3 +1,4 @@
+require "set"
 require "weblog/version"
 require "weblog/page"
 require "weblog/parser"
